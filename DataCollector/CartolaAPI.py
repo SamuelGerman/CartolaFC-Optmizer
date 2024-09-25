@@ -72,8 +72,8 @@ class CartolaAPI:
     
 
     @staticmethod
-    def getMatchesByRound(round,self):
-        if round > 0 and round < self.getCurrentRound():
+    def getMatchesByRound(round):
+        if round > 0 and round < CartolaAPI.getCurrentRound():
             response = requests.get(f"{Config.ENDPOINTS_DICT["API_PARTIDAS"]}/{round}")
             if response.status_code == Config.SUCCESS:
                 response = response.json()
