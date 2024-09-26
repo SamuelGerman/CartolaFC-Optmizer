@@ -1,0 +1,74 @@
+- Create classes to model the JSON data retrieved from the Cartola API and store it
+- Classes Athlete, Match, Round, Team
+Athlete:
+ Atributtes:
+    int id
+    String nickname
+    Position Position
+    int TeamId
+    float price
+    dict<string, int> scouts
+    float avgScore
+    int statusId
+Methods:
+    getAthleteScoutsOnMatch(match) -> dict<string, int> scouts
+
+Class Match:
+    Atributtes:
+    int id
+    int RoundId
+    date date
+    MatchInfo info.
+
+
+Class MatchInfo:
+    int HomeTeamId
+    int AwayTeamId
+    list<string> awayTeamForm
+    list<string> homeTeamForm
+    int homeTeamPlacement
+    int awayTeamPlacement
+    float awayTeamAwaysuccessrate
+    float homeTeamHomesuccessrate
+    bool isDerby
+    float homeWinOdds
+    float awayWinOdds    
+    int homeScore
+    int awayScore
+Methods:
+    __init__
+    getawayTeamAwaySuccessRate(list<string> awayTeamForm)
+    getHomeTeamHomeSuccessRate(list<string> HomeTeamForm)
+    getAwayWinOdds()
+    getHomeWinOdds()
+
+Class Round:
+    Atributtes:
+        int Round
+        int[4] BestAtHome
+        int[4] BestAway
+        int[4] WorstAtHome
+        int[4] WorstAway
+        int[4] BestTeam
+        int[4] WorstTeam
+        int[4] FavouritesIds
+
+List<Matches> validMatches
+    Methods:
+        __init__
+        getBestAtHome()
+        getBestAway()
+        getWorstAtHome()
+        getWorstAway()
+        getBestTeam()
+        getWorstTeam()
+        getFavourites()
+
+Class Team:
+    Attributes:
+
+
+
+
+
+- Web scraping class
