@@ -1,4 +1,6 @@
-from DataCollector import CartolaAPI
+from DataCollector.CartolaAPI import CartolaAPI
+from DataCollector.Scraper import Scraper
 
-var = (CartolaAPI.CartolaAPI.getAthletesOnMarket())
-print(var[0])
+Scraper = Scraper()
+Scraper.getBrasileiraoClubsURLs()
+print (Scraper.clubs_urls)

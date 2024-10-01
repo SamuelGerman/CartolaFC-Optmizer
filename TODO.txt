@@ -1,15 +1,33 @@
+CURRENTLY WORKIN ON: 
+data scraping from sofascore.
+create method to scrape data and palyers from clubs
+creaet methdo to scrape scots from players.
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Create classes to model the JSON data retrieved from the Cartola API and store it
 - Classes Athlete, Match, Round, Team
 Athlete:
  Atributtes:
-    int id
-    String nickname
-    Position Position
-    int TeamId
-    float price
-    dict<string, int> scouts
-    float avgScore
-    int statusId
+    int id -- > get from the api
+    String nickname -- > get from the api
+    Position Position -- > get from the api
+    int TeamId -- > get from the api
+    float price -- > get from the api
+    dict<string, int> scouts -- > get from the api
+    float avgScore -- > get from the api
+    int statusId -- > get from the api
+    dict <int, list<string> matchScouts --> get from scraping
 Methods:
     getAthleteScoutsOnMatch(match) -> dict<string, int> scouts
 
